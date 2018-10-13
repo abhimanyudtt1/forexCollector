@@ -42,13 +42,12 @@ class forexCollectorApplication(object):
                                           'configs/common/commonConfigs')
             thomasCookBot.start()
             thomasCookBot.saveInfo()
-
+            del thomasCookBot
+            
             doorStepForex = DoorStepForex('configs/sites/doorStepForex/basicConfig.yaml',
                                           'configs/common/commonConfigs')
             doorStepForex.start()
             doorStepForex.saveInfo()
-
-            del thomasCookBot
             del doorStepForex
 
             return "Done"
