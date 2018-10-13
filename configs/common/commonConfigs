@@ -1,0 +1,16 @@
+SeleniumServer :
+  ip : localhost
+  port : 4444
+
+ui :
+  host : 0.0.0.0
+  port : 5000
+  branchConfig : configs/common/branch_config.yaml
+  templateConfig : configs/common/template_config.yaml
+  templateLocation : web-inf/webApp-ui
+
+bots :
+  config :
+    doorStepForex : configs/sites/doorStepForex/basicConfig.yaml
+    thomasCook : configs/sites/thomasCook/basicConfig.yaml
+  botLocation : src/bots

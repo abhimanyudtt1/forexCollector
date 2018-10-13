@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foreign Exchange</title>
+</head>
+<body>
+
+    {% for key, value in message.iteritems() %}
+    <h1 style="width: 100%;float: left;text-align: center;">{{ key }}</h1>
+    <table style="width: 100%;">
+        <tbody>
+            {% for v in value %}
+                <tr>
+                    <td>{{v[0]}}</td>
+                    <td>{{v[1]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+
+
+</body>
+</html>
