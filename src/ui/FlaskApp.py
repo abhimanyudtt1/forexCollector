@@ -40,14 +40,16 @@ class forexCollectorApplication(object):
         def updatedData():
             thomasCookBot = ThomasCookBot('configs/sites/thomasCook/basicConfig.yaml',
                                           'configs/common/commonConfigs')
-            doorStepForex = DoorStepForex('configs/sites/doorStepForex/basicConfig.yaml',
-                                          'configs/common/commonConfigs')
-
             thomasCookBot.start()
             thomasCookBot.saveInfo()
 
+            doorStepForex = DoorStepForex('configs/sites/doorStepForex/basicConfig.yaml',
+                                          'configs/common/commonConfigs')
             doorStepForex.start()
             doorStepForex.saveInfo()
+
+            del thomasCookBot
+            del doorStepForex
 
             return "Done"
 
