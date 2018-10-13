@@ -25,7 +25,7 @@ class BaseBot(object):
             command_executor='http://%s:%s/wd/hub' % (
                 self.commonConfig.getConfig()[configKeys.SELENIUM_SERVER][configKeys.SELENIUM_IP],
                 self.commonConfig.getConfig()[configKeys.SELENIUM_SERVER][configKeys.SELENIUM_PORT]),
-            desired_capabilities=DesiredCapabilities.CHROME)
+            desired_capabilities=DesiredCapabilities.FIREFOX)
         self.mainInfo = None
 
     def getPageDriver(self):
